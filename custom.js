@@ -1,6 +1,6 @@
 $(window).on('load', function() {
     
-    var contractAddress = "0x9112f6759f24db5a641d356aaf9053b67e85e79c"; // on Ropsten testnet!
+    var contractAddress = "0x4822f3F816F872a8De53D5a4F809A7882b4C8918"; // on Ropsten testnet!
     var contractAbi = [
 	{
 		"constant": false,
@@ -17,18 +17,16 @@ $(window).on('load', function() {
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [],
-		"name": "greeting",
-		"outputs": [
+		"anonymous": false,
+		"inputs": [
 			{
+				"indexed": false,
 				"name": "",
 				"type": "string"
 			}
 		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
+		"name": "GotGreeting",
+		"type": "event"
 	},
 	{
 		"constant": true,
@@ -45,16 +43,18 @@ $(window).on('load', function() {
 		"type": "function"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
+		"constant": true,
+		"inputs": [],
+		"name": "greeting",
+		"outputs": [
 			{
-				"indexed": false,
 				"name": "",
 				"type": "string"
 			}
 		],
-		"name": "GotGreeting",
-		"type": "event"
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ];
 
